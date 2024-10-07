@@ -7,9 +7,13 @@ This project is designed to match clinical trials from clinicaltrials.gov with p
 The project consists of several stages:
 
 Data Collection & Preprocessing: Collect clinical trial data (manually scraped) and patient data (from CSV files).
+
 Data Integration: Merge patient information with their conditions and trials information.
+
 Eligibility Criteria: Apply inclusion criteria based on age and exclusion criteria based on conditions and interventions.
+
 Output Generation: Output eligible patients for trials in JSON format and Excel.
+
 Testing: Unit and integration tests to verify correctness of the algorithms.
 
 
