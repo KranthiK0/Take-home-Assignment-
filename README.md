@@ -8,6 +8,20 @@ This project is designed to match clinical trials from clinicaltrials.gov with p
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 The project consists of several stages:
 
 Data Collection & Preprocessing: Collect clinical trial data (manually scraped) and patient data (from CSV files).
@@ -19,6 +33,23 @@ Eligibility Criteria: Apply inclusion criteria based on age and exclusion criter
 Output Generation: Output eligible patients for trials in JSON format and Excel.
 
 Testing: Unit and integration tests to verify correctness of the algorithms.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -58,6 +89,26 @@ Interventions: Medical interventions associated with the trial.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Python Scripts:
 
 main.py: Contains the main logic for the matching algorithm, age and exclusion criteria, and data loading functions.
@@ -68,7 +119,28 @@ generate_output.py: Contains logic to generate Excel and JSON files based on fil
 
 
 
+
+
+
+
+
+
+
+
+
+
 IPYNB file is attached 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -85,6 +157,21 @@ eligible_patients_trials.json: JSON file with eligible patients and the trials t
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Project Workflow:
 
 Data Loading & Preprocessing:
@@ -92,6 +179,14 @@ Data Loading & Preprocessing:
 Load patients.csv and conditions.csv, then merge them using Id and PATIENT columns.
 
 Load ctg-studies.csv and preprocess trial conditions, interventions, and age eligibility.
+
+
+
+
+
+
+
+
 
 
 Inclusion Criteria (Age):
@@ -104,6 +199,14 @@ Older Adult: Age >= 65.
 
 
 
+
+
+
+
+
+
+
+
 Exclusion Criteria:
 
 After filtering based on age, patients are further filtered based on exclusion criteria.
@@ -113,9 +216,32 @@ A patient's condition matches any of the interventions associated with the trial
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 Results Generation:
 Eligible patients and their corresponding trials are saved to a JSON file.
 Additionally, an Excel file is generated showing eligible patients and the trials for which they qualify.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -128,12 +254,29 @@ Integration tests validate the entire workflow of loading data, processing eligi
 
 
 
+
+
+
+
+
+
+
+
 Modify Data for Testing:
 
 If you want to test the script with your own data, replace the contents of the following CSV files:
 patients.csv: Replace with new patient demographic data.
 conditions.csv: Replace with new patient conditions.
 ctg-studies.csv: Replace with new clinical trial data.
+
+
+
+
+
+
+
+
+
 
 
 
@@ -166,7 +309,21 @@ json
 
 
 
+
+
+
 Each patient is grouped by patientId, and for each patient, a list of eligible trials is provided, with the eligibility criteria met (e.g., "Age eligibility", "No exclusion condition").
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -182,6 +339,22 @@ Adjusting Criteria:
 The eligibility criteria logic can be modified in main.py:
 Age criteria: Modify the check_age_eligibility function to adjust the age ranges.
 Exclusion criteria: Modify the check_exclusion_criteria function to adjust how conditions and interventions are compared.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Conclusion:
